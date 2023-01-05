@@ -1,5 +1,5 @@
 project(
-  'tinydns', ['c'],
+  'tinylog', ['c'],
   version: '1.0.0',
   license: 'GPLv3',
   default_options : [
@@ -14,6 +14,11 @@ tinylog = shared_library(
   ['tinylog.c'],
   include_directories: include_directories('.'),
   install: true
+)
+
+tinylog_dep = declare_dependency(
+  include_directories: include_directories('.'),
+  link_with: tinylog
 )
 
 pkgc = import('pkgconfig')
