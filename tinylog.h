@@ -54,6 +54,12 @@ void tiny_log_set_out(
 
 
 /**
+ * @brief Returns pointer to the file for logs writing
+ */
+FILE * tiny_log_get_out(void);
+
+
+/**
  * @brief send message (makes log record)
  *
  * @param tag char* Tag for the current message

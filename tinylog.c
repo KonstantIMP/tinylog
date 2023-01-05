@@ -155,6 +155,11 @@ void tiny_log_set_out(
   __TINYLOG_CLOSE_ON_DESTORY = close_on_destroy;
   __TINYLOG_STDLOG = out_fd;
 }
+
+
+FILE * tiny_log_get_out(void) {
+  return __TINYLOG_STDLOG;
+}
     
 
 void tiny_log(
