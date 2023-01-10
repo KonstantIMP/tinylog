@@ -167,6 +167,8 @@ void tiny_log(
     const tiny_log_level_t level,
     const char * format, ...
 ) {
+  if (__TINYLOG_STDLOG == NULL) return;
+
   __tiny_log_print_timestamp();
   __tiny_log_print_tag(tag);
   __tiny_log_print_level(level);
